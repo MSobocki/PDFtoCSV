@@ -9,14 +9,18 @@ PDFtoCSV using tabula module
 
 Scritp ignores all non .PDF files inside the pdf folder
 
+
 ######## pyinstaller --onefile issues ###########
-There are issues compoling the script using pyinsteller - missing tabula-version-jar-with-dependencies.jar file.
 
-Wrokaround is to use line as bellow:
 
-#pyinstaller --onefile --add-binary "/PATH/TO/FILE/tabula-1.0.5-jar-with-dependencies.jar:./tabula/" main.py
+There are issues compiling the script using pyinstaller - missing tabula-version-jar-with-dependencies.jar file.
 
-IMPORTANT!!!! between in place '(...).jar:./tabula/' the ':' is used for UNIX based system (macOS, linux), use ';' if you are going to compail it on Windows
+Workaround is to use line as bellow:
+
+pyinstaller --onefile --add-binary "/PATH/TO/FILE/tabula-1.0.5-jar-with-dependencies.jar:./tabula/" FILE_NAME.py
+
+IMPORTANT!!!! 
+between '(...).jar:./tabula/' the ':' is used for UNIX based system (macOS, linux), use ';' if you are going to compile it on Windows
 
 
 
