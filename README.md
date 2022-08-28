@@ -20,6 +20,7 @@ Workaround is to use line as bellow:
 pyinstaller --onefile --add-binary "/PATH/TO/FILE/tabula-1.0.5-jar-with-dependencies.jar:./tabula/" FILE_NAME.py
 
 IMPORTANT!!!! 
+
 between '(...).jar:./tabula/' the ':' is used for UNIX based system (macOS, linux), use ';' if you are going to compile it on Windows
 
 
